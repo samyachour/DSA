@@ -6,7 +6,6 @@
 //  Copyright © 2018 Samy. All rights reserved.
 //
 
-import Foundation
+let test = SolutionMerge()
 
-print("Hello, World!")
-
+print(test.mergeSort([3,1,6,8,3,2]))
