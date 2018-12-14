@@ -125,49 +125,60 @@ extension DoublyLinkedList: CustomStringConvertible {
     }
 }
 
-public class SinglyNode {
+public class SinglyNode<T: Comparable> {
     
-    // Couldn't get generics to work with comparing
-    var value: String
-    var next: SinglyNode?
+    var value: T
+    var next: SinglyNode<T>?
     
-    init(value: String) {
+    init(value: T) {
         self.value = value
     }
 }
 
-public class SinglyLinkedList {
+extension SinglyNode: Equatable {
+    public static func == (lhs: SinglyNode<T>, rhs: SinglyNode<T>) -> Bool {
+        return lhs.value == rhs.value
+            && lhs.next == rhs.next
+    }
+}
+
+public class SinglyLinkedList<T: Comparable> {
     
-    fileprivate var head: SinglyNode?
-    private var tail: SinglyNode?
+    fileprivate var head: SinglyNode<T>?
+    private var tail: SinglyNode<T>?
     
     public var isEmpty: Bool {
         return head == nil
     }
     
-    public var first: SinglyNode? {
+    public var first: SinglyNode<T>? {
         return head
     }
     
-    public var last: SinglyNode? {
+    public var last: SinglyNode<T>? {
         return tail
     }
     
-    public func append(value: String) {
+    // Because of generic type
+    required init (value: T) {
+        head = SinglyNode(value: value)
+    }
+    
+    public func append(value: T) {
         let newNode = SinglyNode(value: value)
         
         if let tailNode = tail {
             tailNode.next = newNode
-        }
-            
-        else {
+            tail = newNode
+        } else if head != nil { // Same as if let
+            head!.next = newNode
+            tail = newNode
+        } else {
             head = newNode
         }
-        
-        tail = newNode
     }
     
-    public func nodeAt(index: Int) -> SinglyNode? {
+    public func nodeAt(index: Int) -> SinglyNode<T>? {
         
         if index >= 0 {
             var node = head
@@ -188,7 +199,7 @@ public class SinglyLinkedList {
         tail = nil
     }
     
-    public func remove(node: SinglyNode) -> String {
+    public func remove(node: SinglyNode<T>) -> T {
         
         let next = node.next
         let prev = getPrevious(nodeGiven: node)
@@ -217,7 +228,7 @@ public class SinglyLinkedList {
         return node.value
     }
     
-    private func getPrevious(nodeGiven: SinglyNode) -> SinglyNode? {
+    private func getPrevious(nodeGiven: SinglyNode<T>) -> SinglyNode<T>? {
         
         var node = head
         
