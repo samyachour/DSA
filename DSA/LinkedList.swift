@@ -5,54 +5,66 @@
     -Doubly linked lists are when each node has a reference to the previous and next node
         -Search/Access O(n), Insertion/Deletion(1)
     -First and last nodes are the head and tail, kept track of w/ pointers
+    -Removal
+        -Removing the first node just requires the head & previous pointers to be updated
+        -Removing the last node just requires the next & tail pointers to be updated
+        -Removing a node in the middle requires the previous & next pointers to be updated
 */
 
 
-public class Node {
+public class Node<T> {
     
-    var value: String
-    var next: Node?
+    var value: T
+    var next: Node<T>?
     // To prevent retain cycle
-    weak var previous: Node?
+    weak var previous: Node<T>?
     
-    init(value: String) {
+    init(value: T) {
         self.value = value
     }
 }
 
-public class LinkedList {
+
+public class DoublyLinkedList<T> {
     
-    fileprivate var head: Node?
-    private var tail: Node?
+    fileprivate var head: Node<T>?
+    private var tail: Node<T>?
     
     public var isEmpty: Bool {
         return head == nil
     }
     
-    public var first: Node? {
+    public var first: Node<T>? {
         return head
     }
     
-    public var last: Node? {
+    public var last: Node<T>? {
         return tail
     }
     
-    public func append(value: String) {
+    // Because of generic type
+    required init (value: T) {
+        head = Node(value: value)
+    }
+    
+    public func append(value: T) {
         let newNode = Node(value: value)
         
         if let tailNode = tail {
             newNode.previous = tailNode
             tailNode.next = newNode
-        }
-        
-        else {
+            tail = newNode
+        } else if head != nil { // Same as if let
+            newNode.previous = head
+            head!.next = newNode
+            tail = newNode
+        } else {
             head = newNode
         }
-        
-        tail = newNode
+
     }
     
-    public func nodeAt(index: Int) -> Node? {
+    public func nodeAt(index: Int) -> Node<T>? {
         
         if index >= 0 {
             var node = head
@@ -72,9 +84,31 @@ public class LinkedList {
         head = nil
         tail = nil
     }
+    
+    public func remove(node: Node<T>) -> T {
+        
+        let prev = node.previous
+        let next = node.next
+        
+        if let prev = prev {
+            prev.next = next
+        } else {
+            head = next
+        }
+        next?.previous = prev
+        
+        if next == nil {
+            tail = prev
+        }
+        
+        node.previous = nil
+        node.next = nil
+        
+        return node.value
+    }
 }
 
-extension LinkedList: CustomStringConvertible {
+extension DoublyLinkedList: CustomStringConvertible {
 
     public var description: String {
 
@@ -87,6 +121,135 @@ extension LinkedList: CustomStringConvertible {
             if node != nil { text += ", " }
         }
 
+        return text + "]"
+    }
+}
+
+public class SinglyNode {
+    
+    // Couldn't get generics to work with comparing
+    var value: String
+    var next: SinglyNode?
+    
+    init(value: String) {
+        self.value = value
+    }
+}
+
+public class SinglyLinkedList {
+    
+    fileprivate var head: SinglyNode?
+    private var tail: SinglyNode?
+    
+    public var isEmpty: Bool {
+        return head == nil
+    }
+    
+    public var first: SinglyNode? {
+        return head
+    }
+    
+    public var last: SinglyNode? {
+        return tail
+    }
+    
+    public func append(value: String) {
+        let newNode = SinglyNode(value: value)
+        
+        if let tailNode = tail {
+            tailNode.next = newNode
+        }
+            
+        else {
+            head = newNode
+        }
+        
+        tail = newNode
+    }
+    
+    public func nodeAt(index: Int) -> SinglyNode? {
+        
+        if index >= 0 {
+            var node = head
+            var i = index
+            
+            while node != nil {
+                if i == 0 { return node }
+                i -= 1
+                node = node!.next
+            }
+        }
+        
+        return nil
+    }
+    
+    public func removeAll() {
+        head = nil
+        tail = nil
+    }
+    
+    public func remove(node: SinglyNode) -> String {
+        
+        let next = node.next
+        let prev = getPrevious(nodeGiven: node)
+        
+        if let next = next {
+            
+            if node.value == head?.value {
+                
+                head = next
+                
+            } else if let previous = prev {
+                
+                previous.next = next
+                
+            }
+            
+            node.next = nil
+            
+        } else if let previous = prev {
+            
+            tail = previous
+            previous.next = nil
+            
+        }
+        
+        return node.value
+    }
+    
+    private func getPrevious(nodeGiven: SinglyNode) -> SinglyNode? {
+        
+        var node = head
+        
+        while node != nil {
+        
+            if let next = node!.next {
+                if next.value == nodeGiven.value { return node }
+            }
+            
+            node = node!.next
+        
+        }
+        
+        return nil
+        
+        
+    }
+}
+
+extension SinglyLinkedList: CustomStringConvertible {
+    
+    public var description: String {
+        
+        var text = "["
+        var node = head
+        
+        while node != nil {
+            text += "\(node!.value)"
+            node = node!.next
+            if node != nil { text += ", " }
+        }
+        
         return text + "]"
     }
 }
