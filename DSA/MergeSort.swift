@@ -1,4 +1,7 @@
-// Implement merge sort. Split first, merge after. Split all the way to single element then merge in steps keeping the aggregated arrays sorted.
+/*
+-Implement merge sort. Split first, merge after. Split all the way to single element then merge in steps keeping the aggregated arrays sorted.
+*/
+
 class SolutionMerge {
     func mergeSort(_ array: [Int]) -> [Int] {
         
