@@ -1,4 +1,7 @@
-// Find the most common element in an array
+/*
+-Find the most common element in an array
+*/
+
 class SolutionCommon {
     
     func topKFrequent(nums: [Int], k: Int) -> [Int] {

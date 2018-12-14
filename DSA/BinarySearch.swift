@@ -1,5 +1,6 @@
-
-// Chops array in half until you find the value you're looking for. Array needs to be sorted.
+/*
+Chops array in half until you find the value you're looking for. Array needs to be sorted.
+*/
 
 let numbers = [1,4,6,7,10,12,18,19,23,34,44,58,65]
 
