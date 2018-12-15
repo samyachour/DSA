@@ -42,25 +42,17 @@ public class DoublyLinkedList<T> {
         return tail
     }
     
-    // Because of generic type
-    required init (value: T) {
-        head = Node(value: value)
-    }
-    
     public func append(value: T) {
         let newNode = Node(value: value)
         
         if let tailNode = tail {
             newNode.previous = tailNode
             tailNode.next = newNode
-            tail = newNode
-        } else if head != nil { // Same as if let
-            newNode.previous = head
-            head!.next = newNode
-            tail = newNode
         } else {
             head = newNode
         }
+        
+        tail = newNode
 
     }
     
@@ -105,6 +97,33 @@ public class DoublyLinkedList<T> {
         node.next = nil
         
         return node.value
+    }
+    
+    public func insert(_ node: Node<T>, atIndex index: Int) {
+        let newNode = node
+        if index == 0 {
+            newNode.next = head
+            head?.previous = newNode
+            head = newNode
+        } else {
+            let prev = self.nodeAt(index: index-1)
+            let next = prev?.next
+            
+            newNode.previous = prev
+            newNode.next = prev?.next
+            prev?.next = newNode
+            next?.previous = newNode
+        }
+    }
+    
+    public func reverse() {
+        var node = head
+        tail = node // If you had a tail pointer
+        while let currentNode = node {
+            node = currentNode.next
+            swap(&currentNode.next, &currentNode.previous)
+            head = currentNode
+        }
     }
 }
 
@@ -159,23 +178,16 @@ public class SinglyLinkedList<T: Comparable> {
         return tail
     }
     
-    // Because of generic type
-    required init (value: T) {
-        head = SinglyNode(value: value)
-    }
-    
     public func append(value: T) {
         let newNode = SinglyNode(value: value)
         
         if let tailNode = tail {
             tailNode.next = newNode
-            tail = newNode
-        } else if head != nil { // Same as if let
-            head!.next = newNode
-            tail = newNode
         } else {
             head = newNode
         }
+        
+        tail = newNode
     }
     
     public func nodeAt(index: Int) -> SinglyNode<T>? {
@@ -245,6 +257,19 @@ public class SinglyLinkedList<T: Comparable> {
         return nil
         
         
+    }
+    
+    public func insert(_ node: SinglyNode<T>, atIndex index: Int) {
+        let newNode = node
+        if index == 0 {
+            newNode.next = head
+            head = newNode
+        } else {
+            let prev = self.nodeAt(index: index-1)
+            
+            newNode.next = prev?.next
+            prev?.next = newNode
+        }
     }
 }
 
