@@ -11,6 +11,8 @@
 		2E3019A521C4C88000026DAB /* BoyerMooreSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3019A421C4C88000026DAB /* BoyerMooreSearch.swift */; };
 		2E3019A721C4CBC100026DAB /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3019A621C4CBC100026DAB /* QuickSort.swift */; };
 		2E3019A921C4DB7800026DAB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3019A821C4DB7800026DAB /* Tree.swift */; };
+		2E3019AC21C4E12900026DAB /* BinarySearchTreeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3019AB21C4E12900026DAB /* BinarySearchTreeEnum.swift */; };
+		2E3019AE21C58D3400026DAB /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3019AD21C58D3400026DAB /* BinarySearchTree.swift */; };
 		2E3930C121C2D20A007FB617 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3930C021C2D20A007FB617 /* main.swift */; };
 		2E3930CA21C2D21D007FB617 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3930C721C2D21D007FB617 /* MergeSort.swift */; };
 		2E3930CB21C2D21D007FB617 /* CommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3930C821C2D21D007FB617 /* CommonElement.swift */; };
@@ -19,6 +21,11 @@
 		2E80487C21C36914008A01FE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487B21C36914008A01FE /* Queue.swift */; };
 		2E80487E21C3697C008A01FE /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487D21C3697C008A01FE /* LinkedList.swift */; };
 		2E80488021C37A98008A01FE /* FBGlassdoor#1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */; };
+		2EE55D8F21C5994300BEDDD0 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D8E21C5994300BEDDD0 /* Graph.swift */; };
+		2EE55D9121C59C2C00BEDDD0 /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */; };
+		2EE55D9321C59EF400BEDDD0 /* 3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */; };
+		2EE55D9521C5AFAE00BEDDD0 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */; };
+		2EE55D9721C5B2CE00BEDDD0 /* Stocks2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9621C5B2CE00BEDDD0 /* Stocks2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +45,8 @@
 		2E3019A421C4C88000026DAB /* BoyerMooreSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyerMooreSearch.swift; sourceTree = "<group>"; };
 		2E3019A621C4CBC100026DAB /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		2E3019A821C4DB7800026DAB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		2E3019AB21C4E12900026DAB /* BinarySearchTreeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeEnum.swift; sourceTree = "<group>"; };
+		2E3019AD21C58D3400026DAB /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		2E3930BD21C2D20A007FB617 /* DSA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSA; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3930C021C2D20A007FB617 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2E3930C721C2D21D007FB617 /* MergeSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
@@ -47,6 +56,11 @@
 		2E80487B21C36914008A01FE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2E80487D21C3697C008A01FE /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBGlassdoor#1.swift"; sourceTree = "<group>"; };
+		2EE55D8E21C5994300BEDDD0 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
+		2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3Sum.swift; sourceTree = "<group>"; };
+		2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
+		2EE55D9621C5B2CE00BEDDD0 /* Stocks2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3019AF21C5922A00026DAB /* MyDSA */ = {
+			isa = PBXGroup;
+			children = (
+				2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */,
+				2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */,
+				2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */,
+				2EE55D9621C5B2CE00BEDDD0 /* Stocks2.swift */,
+			);
+			path = MyDSA;
+			sourceTree = "<group>";
+		};
 		2E3930B421C2D20A007FB617 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +104,8 @@
 		2E3930BF21C2D20A007FB617 /* DSA */ = {
 			isa = PBXGroup;
 			children = (
+				2E3019AF21C5922A00026DAB /* MyDSA */,
+				2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */,
 				2E3930C921C2D21D007FB617 /* BinarySearch.swift */,
 				2E3930C821C2D21D007FB617 /* CommonElement.swift */,
 				2E3930C721C2D21D007FB617 /* MergeSort.swift */,
@@ -86,11 +113,13 @@
 				2E80487921C367B8008A01FE /* Stack.swift */,
 				2E80487B21C36914008A01FE /* Queue.swift */,
 				2E80487D21C3697C008A01FE /* LinkedList.swift */,
-				2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */,
 				2E3019A221C4C4F500026DAB /* InsertionSort.swift */,
 				2E3019A421C4C88000026DAB /* BoyerMooreSearch.swift */,
 				2E3019A621C4CBC100026DAB /* QuickSort.swift */,
 				2E3019A821C4DB7800026DAB /* Tree.swift */,
+				2E3019AB21C4E12900026DAB /* BinarySearchTreeEnum.swift */,
+				2E3019AD21C58D3400026DAB /* BinarySearchTree.swift */,
+				2EE55D8E21C5994300BEDDD0 /* Graph.swift */,
 			);
 			path = DSA;
 			sourceTree = "<group>";
@@ -156,11 +185,18 @@
 				2E80488021C37A98008A01FE /* FBGlassdoor#1.swift in Sources */,
 				2E3930CC21C2D21D007FB617 /* BinarySearch.swift in Sources */,
 				2E80487C21C36914008A01FE /* Queue.swift in Sources */,
+				2EE55D9521C5AFAE00BEDDD0 /* Stocks.swift in Sources */,
 				2E3019A721C4CBC100026DAB /* QuickSort.swift in Sources */,
+				2EE55D9721C5B2CE00BEDDD0 /* Stocks2.swift in Sources */,
+				2E3019AC21C4E12900026DAB /* BinarySearchTreeEnum.swift in Sources */,
+				2EE55D9321C59EF400BEDDD0 /* 3Sum.swift in Sources */,
+				2EE55D9121C59C2C00BEDDD0 /* TwoSum.swift in Sources */,
 				2E80487A21C367B8008A01FE /* Stack.swift in Sources */,
 				2E3930CA21C2D21D007FB617 /* MergeSort.swift in Sources */,
 				2E3019A521C4C88000026DAB /* BoyerMooreSearch.swift in Sources */,
+				2EE55D8F21C5994300BEDDD0 /* Graph.swift in Sources */,
 				2E3930C121C2D20A007FB617 /* main.swift in Sources */,
+				2E3019AE21C58D3400026DAB /* BinarySearchTree.swift in Sources */,
 				2E3019A921C4DB7800026DAB /* Tree.swift in Sources */,
 				2E3930CB21C2D21D007FB617 /* CommonElement.swift in Sources */,
 				2E80487E21C3697C008A01FE /* LinkedList.swift in Sources */,

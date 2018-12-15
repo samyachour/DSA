@@ -1,6 +1,3 @@
 
-var queue = Queue<Int>()
-queue.enqueue(1)
-queue.enqueue(2)
-queue.enqueue(3)
-print(queue)
+let test = SolutionStocks()
+print(test.maxProfit([2,4,1]))

@@ -12,12 +12,12 @@
 */
 
 
-public class Node<T> {
+public class DoublyNode<T> {
     
     var value: T
-    var next: Node<T>?
+    var next: DoublyNode<T>?
     // To prevent retain cycle
-    weak var previous: Node<T>?
+    weak var previous: DoublyNode<T>?
     
     init(value: T) {
         self.value = value
@@ -27,23 +27,23 @@ public class Node<T> {
 
 public class DoublyLinkedList<T> {
     
-    fileprivate var head: Node<T>?
-    private var tail: Node<T>?
+    fileprivate var head: DoublyNode<T>?
+    private var tail: DoublyNode<T>?
     
     public var isEmpty: Bool {
         return head == nil
     }
     
-    public var first: Node<T>? {
+    public var first: DoublyNode<T>? {
         return head
     }
     
-    public var last: Node<T>? {
+    public var last: DoublyNode<T>? {
         return tail
     }
     
     public func append(value: T) {
-        let newNode = Node(value: value)
+        let newNode = DoublyNode(value: value)
         
         if let tailNode = tail {
             newNode.previous = tailNode
@@ -56,7 +56,7 @@ public class DoublyLinkedList<T> {
 
     }
     
-    public func nodeAt(index: Int) -> Node<T>? {
+    public func nodeAt(index: Int) -> DoublyNode<T>? {
         
         if index >= 0 {
             var node = head
@@ -77,7 +77,7 @@ public class DoublyLinkedList<T> {
         tail = nil
     }
     
-    public func remove(node: Node<T>) -> T {
+    public func remove(node: DoublyNode<T>) {
         
         let prev = node.previous
         let next = node.next
@@ -96,10 +96,11 @@ public class DoublyLinkedList<T> {
         node.previous = nil
         node.next = nil
         
-        return node.value
+        // return node.value
+
     }
     
-    public func insert(_ node: Node<T>, atIndex index: Int) {
+    public func insert(_ node: DoublyNode<T>, atIndex index: Int) {
         let newNode = node
         if index == 0 {
             newNode.next = head
@@ -211,7 +212,7 @@ public class SinglyLinkedList<T: Comparable> {
         tail = nil
     }
     
-    public func remove(node: SinglyNode<T>) -> T {
+    public func remove(node: SinglyNode<T>) {
         
         let next = node.next
         let prev = getPrevious(nodeGiven: node)
@@ -237,7 +238,7 @@ public class SinglyLinkedList<T: Comparable> {
             
         }
         
-        return node.value
+//        return node.value
     }
     
     private func getPrevious(nodeGiven: SinglyNode<T>) -> SinglyNode<T>? {

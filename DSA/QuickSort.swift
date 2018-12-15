@@ -2,6 +2,7 @@
 -Quick sort splits an array into 3 parts based on a pivot variable
     -all the elements less than the pivot go into an array called 'less', all equal go into 'equal', and greater go into 'greater'
     -sorts the less and greater arrays, then glues them back on both sides of equal
+    -Runtime is O(N log N)
 */
 
 func partitionLomuto<T: Comparable>(_ a: inout [T], low: Int, high: Int) -> Int {
