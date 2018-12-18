@@ -41,6 +41,8 @@
 		2EF8C4A821C7675A00D67295 /* MergeTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8C4A721C7675A00D67295 /* MergeTrees.swift */; };
 		2EF8C4AA21C7756400D67295 /* DuplicateSubTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8C4A921C7756400D67295 /* DuplicateSubTree.swift */; };
 		2EF8C4AE21C7891200D67295 /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8C4AD21C7891200D67295 /* HashTable.swift */; };
+		95A7AF3E21C8724D00D66AAB /* SymmetricTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7AF3D21C8724D00D66AAB /* SymmetricTree.swift */; };
+		95A7AF4021C87C1D00D66AAB /* MergeSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7AF3F21C87C1D00D66AAB /* MergeSorted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,6 +93,8 @@
 		2EF8C4A721C7675A00D67295 /* MergeTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTrees.swift; sourceTree = "<group>"; };
 		2EF8C4A921C7756400D67295 /* DuplicateSubTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateSubTree.swift; sourceTree = "<group>"; };
 		2EF8C4AD21C7891200D67295 /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
+		95A7AF3D21C8724D00D66AAB /* SymmetricTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetricTree.swift; sourceTree = "<group>"; };
+		95A7AF3F21C87C1D00D66AAB /* MergeSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSorted.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				2EF8C4A521C7510800D67295 /* LongestSubstring.swift */,
 				2EF8C4A721C7675A00D67295 /* MergeTrees.swift */,
 				2EF8C4A921C7756400D67295 /* DuplicateSubTree.swift */,
+				95A7AF3D21C8724D00D66AAB /* SymmetricTree.swift */,
+				95A7AF3F21C87C1D00D66AAB /* MergeSorted.swift */,
 			);
 			path = MyDSA;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				2E3930CC21C2D21D007FB617 /* BinarySearch.swift in Sources */,
 				2E80487C21C36914008A01FE /* Queue.swift in Sources */,
 				2EE55D9521C5AFAE00BEDDD0 /* Stocks.swift in Sources */,
+				95A7AF4021C87C1D00D66AAB /* MergeSorted.swift in Sources */,
 				2E3019A721C4CBC100026DAB /* QuickSort.swift in Sources */,
 				2EED4E4421C657DE0052B208 /* DuplicateLinked.swift in Sources */,
 				2EE55D9921C5C09700BEDDD0 /* Climbing Stairs.swift in Sources */,
@@ -259,6 +266,7 @@
 				2EE55DA321C5E1C000BEDDD0 /* OddEvenLinkedList.swift in Sources */,
 				2E3930CB21C2D21D007FB617 /* CommonElement.swift in Sources */,
 				2EF8C4AE21C7891200D67295 /* HashTable.swift in Sources */,
+				95A7AF3E21C8724D00D66AAB /* SymmetricTree.swift in Sources */,
 				2E80487E21C3697C008A01FE /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
