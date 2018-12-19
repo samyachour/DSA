@@ -47,52 +47,81 @@ public class TreeNodeKth {
 	}
 
 class SolutionKthSmallest {
+    
+    var res = 0
+    var maxLength = 0
+    
+    func kthSmallest(_ root: TreeNodeKth?, _ k: Int) -> Int {
+        
+        maxLength = k
+        helper(node: root)
+        return res
+    }
+    
+    func helper(node: TreeNodeKth?) {
+        guard let node = node else {
+            return
+        }
+        
+        helper(node: node.left)
+        maxLength -= 1
+        if maxLength == 0 {
+            res = node.val
+            return
+        }
+        helper(node: node.right)
+        
+    }
+    
+    func insertSorted(val: Int, arr: inout [Int]) {
+        
+        for (idx,elem) in arr.enumerated() {
+            
+            if val > elem && val <= arr[idx + 1] {
+                arr.insert(val, at: idx)
+                return
+            }
+            
+        }
+        
+    }
 	
-	
-	
-	func insertSorted(val: Int) {
+	func kthSmallestBAD(_ root: TreeNodeKth?, _ k: Int) -> Int {
 		
-		for (idx,elem) in lastNodes.enumerated() {
-			
-			if val > elem && val <= lastNodes[idx + 1] {
-				lastNodes.insert(val, at: idx)
-				return
-			}
-			
-		}
-		
-	}
-	
-	var lastNodes = [Int]()
-	var maxLength = 0
-	var lastNodesPrimed : [Int] {
-		if lastNodes.count > maxLength {
-			return Array( lastNodes[0..<(maxLength - 1)] )
-		}
-		return lastNodes
-	}
-	
-	func kthSmallest(_ root: TreeNodeKth?, _ k: Int) -> Int {
-		
-		maxLength = k
+        guard var node = root else {
+            return 0
+        }
+        
 		var end = false
-		var node = root
 		var lastNode = node
+        var lastNodes = [node.val]
 		
-		while !end && lastNodes.count < k {
-			
-			if let left = node?.left, !lastNodes.contains(left.val) {
-				
+		while !end || lastNodes.count <= k {
+            
+			if let left = node.left, !lastNodes.contains(left.val) {
+                insertSorted(val: left.val, arr: &lastNodes)
 				lastNode = node
 				node = left
-			} else {
-				end = true
-			}
-			
-			print('blad')
-		}
+                continue
+            } else if node.left == nil {
+                end = true
+            }
+            if let right = node.right, !lastNodes.contains(right.val) {
+                insertSorted(val: right.val, arr: &lastNodes)
+                lastNode = node
+                node = right
+                continue
+            }
+            node = lastNode
+        }
 		
+        if lastNodes.count == 0 {
+            return 0
+        } else if k - 1 < lastNodes.count {
+            return lastNodes[k-1]
+        } else {
+            return lastNodes.last!
+        }
 		
-		return lastNodesPrimed[k-1]
 	}
 }
