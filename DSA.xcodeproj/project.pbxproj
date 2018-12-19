@@ -27,6 +27,7 @@
 		2E80487C21C36914008A01FE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487B21C36914008A01FE /* Queue.swift */; };
 		2E80487E21C3697C008A01FE /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487D21C3697C008A01FE /* LinkedList.swift */; };
 		2E80488021C37A98008A01FE /* FBGlassdoor#1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */; };
+		2E96381C21CA597E0065E663 /* BalancedTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E96381B21CA597E0065E663 /* BalancedTree.swift */; };
 		2EE55D9121C59C2C00BEDDD0 /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */; };
 		2EE55D9321C59EF400BEDDD0 /* 3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */; };
 		2EE55D9521C5AFAE00BEDDD0 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */; };
@@ -86,6 +87,7 @@
 		2E80487B21C36914008A01FE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2E80487D21C3697C008A01FE /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBGlassdoor#1.swift"; sourceTree = "<group>"; };
+		2E96381B21CA597E0065E663 /* BalancedTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancedTree.swift; sourceTree = "<group>"; };
 		2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
 		2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3Sum.swift; sourceTree = "<group>"; };
 		2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				2E229DE521C8B8DC0006299A /* IterativeTraversal.swift */,
 				2E229DF021C8CDBF0006299A /* PrefixTree.swift */,
 				95A7AF4321C9B97800D66AAB /* KthSmallestBST.swift */,
+				2E96381B21CA597E0065E663 /* BalancedTree.swift */,
 			);
 			path = MyDSA;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				2E3019A921C4DB7800026DAB /* Tree.swift in Sources */,
 				2E229DE621C8B8DC0006299A /* IterativeTraversal.swift in Sources */,
 				2EE55DA321C5E1C000BEDDD0 /* OddEvenLinkedList.swift in Sources */,
+				2E96381C21CA597E0065E663 /* BalancedTree.swift in Sources */,
 				2E3930CB21C2D21D007FB617 /* CommonElement.swift in Sources */,
 				2EF8C4AE21C7891200D67295 /* HashTable.swift in Sources */,
 				95A7AF3E21C8724D00D66AAB /* SymmetricTree.swift in Sources */,
