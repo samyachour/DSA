@@ -49,6 +49,7 @@
 		2EF8C4AE21C7891200D67295 /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8C4AD21C7891200D67295 /* HashTable.swift */; };
 		95A7AF3E21C8724D00D66AAB /* SymmetricTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7AF3D21C8724D00D66AAB /* SymmetricTree.swift */; };
 		95A7AF4021C87C1D00D66AAB /* MergeSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7AF3F21C87C1D00D66AAB /* MergeSorted.swift */; };
+		95A7AF4421C9B97800D66AAB /* KthSmallestBST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7AF4321C9B97800D66AAB /* KthSmallestBST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +108,7 @@
 		2EF8C4AD21C7891200D67295 /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
 		95A7AF3D21C8724D00D66AAB /* SymmetricTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetricTree.swift; sourceTree = "<group>"; };
 		95A7AF3F21C87C1D00D66AAB /* MergeSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSorted.swift; sourceTree = "<group>"; };
+		95A7AF4321C9B97800D66AAB /* KthSmallestBST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KthSmallestBST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				2E229DE321C8A01B0006299A /* ConstructTree.swift */,
 				2E229DE521C8B8DC0006299A /* IterativeTraversal.swift */,
 				2E229DF021C8CDBF0006299A /* PrefixTree.swift */,
+				95A7AF4321C9B97800D66AAB /* KthSmallestBST.swift */,
 			);
 			path = MyDSA;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				2EF8C4A621C7510800D67295 /* LongestSubstring.swift in Sources */,
 				2EED4E3C21C62A550052B208 /* Median2Sorted.swift in Sources */,
 				2EE55D9B21C5D1D900BEDDD0 /* ContainsDuplicate.swift in Sources */,
+				95A7AF4421C9B97800D66AAB /* KthSmallestBST.swift in Sources */,
 				2EE55DA121C5DEE800BEDDD0 /* Shuffle.swift in Sources */,
 				2EF8C4A821C7675A00D67295 /* MergeTrees.swift in Sources */,
 				2EED4E4221C647B30052B208 /* FlattenTree.swift in Sources */,
