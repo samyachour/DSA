@@ -48,6 +48,21 @@ public class TreeNodeKth {
 
 class SolutionKthSmallest {
 	
+	
+	
+	func insertSorted(val: Int) {
+		
+		for (idx,elem) in lastNodes.enumerated() {
+			
+			if val > elem && val <= lastNodes[idx + 1] {
+				lastNodes.insert(val, at: idx)
+				return
+			}
+			
+		}
+		
+	}
+	
 	var lastNodes = [Int]()
 	var maxLength = 0
 	var lastNodesPrimed : [Int] {
