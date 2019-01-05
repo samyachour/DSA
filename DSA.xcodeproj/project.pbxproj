@@ -30,6 +30,7 @@
 		2E80487E21C3697C008A01FE /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487D21C3697C008A01FE /* LinkedList.swift */; };
 		2E80488021C37A98008A01FE /* FBGlassdoor#1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */; };
 		2E96381C21CA597E0065E663 /* BalancedTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E96381B21CA597E0065E663 /* BalancedTree.swift */; };
+		2EDE051F21E0680100B4F12D /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE051E21E0680100B4F12D /* Library.swift */; };
 		2EE55D9121C59C2C00BEDDD0 /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */; };
 		2EE55D9321C59EF400BEDDD0 /* 3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */; };
 		2EE55D9521C5AFAE00BEDDD0 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */; };
@@ -92,6 +93,7 @@
 		2E80487D21C3697C008A01FE /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		2E80487F21C37A98008A01FE /* FBGlassdoor#1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBGlassdoor#1.swift"; sourceTree = "<group>"; };
 		2E96381B21CA597E0065E663 /* BalancedTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancedTree.swift; sourceTree = "<group>"; };
+		2EDE051E21E0680100B4F12D /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		2EE55D9021C59C2C00BEDDD0 /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
 		2EE55D9221C59EF400BEDDD0 /* 3Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3Sum.swift; sourceTree = "<group>"; };
 		2EE55D9421C5AFAE00BEDDD0 /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				2E46439E21DF330D0033D4EB /* ParkingLot.swift */,
+				2EDE051E21E0680100B4F12D /* Library.swift */,
 			);
 			path = SystemDesign;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				2EE55D9721C5B2CE00BEDDD0 /* Stocks2.swift in Sources */,
 				2E229DF121C8CDBF0006299A /* PrefixTree.swift in Sources */,
 				2EE55DA521C5F33A00BEDDD0 /* GraphClone.swift in Sources */,
+				2EDE051F21E0680100B4F12D /* Library.swift in Sources */,
 				2E3019AC21C4E12900026DAB /* BinarySearchTreeEnum.swift in Sources */,
 				2EE55D9321C59EF400BEDDD0 /* 3Sum.swift in Sources */,
 				2EE55D9121C59C2C00BEDDD0 /* TwoSum.swift in Sources */,
