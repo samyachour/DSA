@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1E543221E179E100325C1B /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E543121E179E100325C1B /* Elevator.swift */; };
 		2E229DE421C8A01B0006299A /* ConstructTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229DE321C8A01B0006299A /* ConstructTree.swift */; };
 		2E229DE621C8B8DC0006299A /* IterativeTraversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229DE521C8B8DC0006299A /* IterativeTraversal.swift */; };
 		2E229DEB21C8C7060006299A /* StackImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E229DEA21C8C7060006299A /* StackImp.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E1E543121E179E100325C1B /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
 		2E229DE321C8A01B0006299A /* ConstructTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructTree.swift; sourceTree = "<group>"; };
 		2E229DE521C8B8DC0006299A /* IterativeTraversal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IterativeTraversal.swift; sourceTree = "<group>"; };
 		2E229DEA21C8C7060006299A /* StackImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackImp.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				2E46439E21DF330D0033D4EB /* ParkingLot.swift */,
 				2EDE051E21E0680100B4F12D /* Library.swift */,
+				2E1E543121E179E100325C1B /* Elevator.swift */,
 			);
 			path = SystemDesign;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				2EED4E4421C657DE0052B208 /* DuplicateLinked.swift in Sources */,
 				2EE55D9921C5C09700BEDDD0 /* Climbing Stairs.swift in Sources */,
 				2EE55D9721C5B2CE00BEDDD0 /* Stocks2.swift in Sources */,
+				2E1E543221E179E100325C1B /* Elevator.swift in Sources */,
 				2E229DF121C8CDBF0006299A /* PrefixTree.swift in Sources */,
 				2EE55DA521C5F33A00BEDDD0 /* GraphClone.swift in Sources */,
 				2EDE051F21E0680100B4F12D /* Library.swift in Sources */,

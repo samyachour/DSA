@@ -18,7 +18,7 @@
  The system should be able to send notifications whenever the reserved books become available, as well as when the book is not returned within the due date.
  
  The system will be able to read barcodes from books and members’ library cards.
- */
+  */
 
 import Foundation
 
@@ -166,3 +166,14 @@ class BookItem: Book {
         return false
     }
 }
+//
+//class Account {
+//    var id: String
+//    var password: String
+//    var status: AccountStatus
+//    let person: Person
+//
+//    init(<#parameters#>) {
+//        <#statements#>
+//    }
+//}
