@@ -1,5 +1,5 @@
 /*
- 
+ https://stackoverflow.com/questions/493276/modelling-an-elevator-using-object-oriented-analysis-and-design
  */
 
 let maxFloors = 10
@@ -29,8 +29,8 @@ class Elevator {
     }
     
     var load = 0
-
     private var floorRequests = [Int]()
+    weak var parentBank : Bank?
     
     func addFloor(floor: Int) {
         if floorRequests.contains(floor) { return }
@@ -43,6 +43,7 @@ class Elevator {
     
     func changeDirection(newDirection: Direction) {
         if direction == newDirection { return }
+        direction = newDirection
         
         if newDirection == Direction.up {
             floorRequests.sort(by: <)
@@ -50,10 +51,14 @@ class Elevator {
             floorRequests.sort(by: >)
         } else if newDirection == Direction.maintenance {
             openDoors()
-            floorRequests = [] // Might want to reschedule the requests before clearing
+            
+            // Release all the floor requests to other elevators
+            if let bank = parentBank {
+                while !floorRequests.isEmpty {
+                    bank.requestFloor(floor: floorRequests.removeFirst(), load: 1)
+                }
+            }
         }
-        
-        direction = newDirection
     }
     
     func openDoors() {
@@ -66,7 +71,7 @@ class Elevator {
     
     func releaseLoad() {
         openDoors()
-        load -= 1
+        load -= 1 // Might want to make floorRequests a list of tuples with request + load pairs, incrementing the load every time a duplicate floor request is made and initializing at 1
         closeDoors()
     }
     

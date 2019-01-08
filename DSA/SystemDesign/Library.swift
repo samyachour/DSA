@@ -18,6 +18,8 @@
  The system should be able to send notifications whenever the reserved books become available, as well as when the book is not returned within the due date.
  
  The system will be able to read barcodes from books and members’ library cards.
+ 
+ NOTE: Unfinished
   */
 
 import Foundation
@@ -58,7 +60,7 @@ enum AccountStatus {
     case None
 }
 
-struct Address {
+struct LibraryAddress {
     let streetAddress: String
     let city: String
     let state: String
