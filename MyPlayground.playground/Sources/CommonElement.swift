@@ -29,7 +29,7 @@ class SolutionCommon {
                 continue
             }
             
-            if let index = common.index(where: { valueCounts[$0]! > count }) {
+            if let index = common.firstIndex(where: { valueCounts[$0]! > count }) {
                 common.insert(value, at: index)
             } else {
                 common.append(value)
