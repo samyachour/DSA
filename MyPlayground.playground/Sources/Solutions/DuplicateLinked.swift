@@ -6,18 +6,9 @@
  Input: 1->1->2
  Output: 1->2
  */
-
- public class ListNodeDuplicate {
-     public var val: Int
-     public var next: ListNodeDuplicate?
-     public init(_ val: Int) {
-         self.val = val
-         self.next = nil
-     }
- }
  
 class SolutionDuplicateLinked {
-    func deleteDuplicates(_ head: ListNodeDuplicate?) -> ListNodeDuplicate? {
+    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
         
         var currNode = head
         

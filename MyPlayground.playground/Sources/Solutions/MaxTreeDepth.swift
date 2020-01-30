@@ -19,18 +19,7 @@
  - Go down a path, when we hit a leaf record the depth (if max), go up a level, and try the other leaf, if that leaf doesn't work, go up a level, try the other one.
  */
 
- public class TreeNode {
-     public var val: Int
-     public var left: TreeNode?
-     public var right: TreeNode?
-     public init(_ val: Int) {
-         self.val = val
-         self.left = nil
-         self.right = nil
-     }
- }
-
-class Solution {
+class SolutionMaxDepth {
     
     func maxDepth(_ root: TreeNode?) -> Int {
         

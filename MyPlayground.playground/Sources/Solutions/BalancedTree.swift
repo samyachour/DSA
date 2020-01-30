@@ -6,19 +6,8 @@
  a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
  */
 
-public class TreeNodeBalanced {
-        public var val: Int
-        public var left: TreeNodeBalanced?
-        public var right: TreeNodeBalanced?
-        public init(_ val: Int) {
-                self.val = val
-                    self.left = nil
-                    self.right = nil
-            }
-    }
-
 class SolutionBalanced {
-    func isBalanced(_ root: TreeNodeBalanced?) -> Bool {
+    func isBalanced(_ root: TreeNode?) -> Bool {
         guard let root = root else {
             return true
         }
@@ -26,7 +15,7 @@ class SolutionBalanced {
         return abs(getHeight(node: root.left) - getHeight(node: root.right)) < 2 && isBalanced(root.left) && isBalanced(root.right)
     }
     
-    func getHeight(node: TreeNodeBalanced?) -> Int {
+    func getHeight(node: TreeNode?) -> Int {
         
         guard let node = node else {
             return 0

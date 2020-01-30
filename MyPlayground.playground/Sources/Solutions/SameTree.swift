@@ -14,20 +14,8 @@
  Output: true
  */
 
-
- public class TreeNodeSame {
-    public var val: Int
-    public var left: TreeNodeSame?
-    public var right: TreeNodeSame?
-    public init(_ val: Int) {
-        self.val = val
-        self.left = nil
-        self.right = nil
-    }
-}
-
-extension TreeNodeSame {
-    public func traversePostOrder(process: (Int?) -> Void) {
+private extension TreeNode {
+    func traversePostOrder(process: (Int?) -> Void) {
         left?.traversePostOrder(process: process) ?? process(nil)
         right?.traversePostOrder(process: process) ?? process(nil)
 
@@ -37,7 +25,7 @@ extension TreeNodeSame {
 
 class SolutionSameTree {
     
-    func isSameTree(_ p: TreeNodeSame?, _ q: TreeNodeSame?) -> Bool {
+    func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
         var pValues = [Int?]()
         p?.traversePostOrder(process: { (val) in
             pValues.append(val)

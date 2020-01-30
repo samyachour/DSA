@@ -2,22 +2,11 @@
  Given a binary tree, return the inorder traversal of its nodes' values.
  */
 
- public class TreeNodeTraverse {
-     public var val: Int
-     public var left: TreeNodeTraverse?
-     public var right: TreeNodeTraverse?
-     public init(_ val: Int) {
-         self.val = val
-         self.left = nil
-         self.right = nil
-     }
- }
-
- class SolutionTraverse {
+class SolutionTraverse {
     
     var vals = [Int]()
     
-    func iterativeTraversal(node_: TreeNodeTraverse?) {
+    func iterativeTraversal(node_: TreeNode?) {
         
         var node = node_
         
@@ -28,7 +17,7 @@
         
     }
     
-    func recursiveTraversal(node: TreeNodeTraverse?) {
+    func recursiveTraversal(node: TreeNode?) {
         guard let node = node else {
             return
         }
@@ -37,7 +26,7 @@
         recursiveTraversal(node: node.right)
     }
     
-    func inorderTraversal(_ root: TreeNodeTraverse?) -> [Int] {
+    func inorderTraversal(_ root: TreeNode?) -> [Int] {
         iterativeTraversal(node_: root)
         return vals
     }

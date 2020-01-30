@@ -34,28 +34,17 @@ return root node
  
  */
 
- public class TreeNodeConstruct {
-     public var val: Int
-     public var left: TreeNodeConstruct?
-     public var right: TreeNodeConstruct?
-     public init(_ val: Int) {
-         self.val = val
-         self.left = nil
-         self.right = nil
-     }
- }
- 
 class SolutionConstruct {
     
     var preorder_ = [Int]()
     
-    func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNodeConstruct? {
+    func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         preorder_ = preorder
         if preorder == [] || inorder == [] {
             return nil
         }
         
-        let root = TreeNodeConstruct( preorder_.remove(at: 0) )
+        let root = TreeNode( preorder_.remove(at: 0) )
         let inorderIndex = inorder.firstIndex(of: root.val)!
         
         root.left = buildTree(preorder_, Array(inorder[0..<inorderIndex]))
@@ -64,19 +53,19 @@ class SolutionConstruct {
         return root
     }
     
-    func buildTreeBad(_ preorder: [Int], _ inorder: [Int]) -> TreeNodeConstruct? {
+    func buildTreeBad(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         if preorder == [] && inorder == [] {
             return nil
         }
         if inorder.count == 1 {
-            return TreeNodeConstruct(inorder[0])
+            return TreeNode(inorder[0])
         }
         if preorder.count == 2 {
-            let root = TreeNodeConstruct(preorder[0])
+            let root = TreeNode(preorder[0])
             if preorder[1] == inorder[0] {
-                root.left = TreeNodeConstruct(preorder[1])
+                root.left = TreeNode(preorder[1])
             } else {
-                root.right = TreeNodeConstruct(preorder[1])
+                root.right = TreeNode(preorder[1])
             }
             return root
         }

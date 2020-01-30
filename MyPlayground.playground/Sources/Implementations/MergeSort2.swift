@@ -2,7 +2,7 @@
  -Merge sort divides the lists into basic elements then merges them back sorted at each level's union
  */
 
-func merge_(leftArray: [Int], rightArray: [Int]) -> [Int] {
+func merge2(leftArray: [Int], rightArray: [Int]) -> [Int] {
     var leftIndex = 0
     var rightIndex = 0
     var ordered = [Int]()
@@ -37,7 +37,7 @@ func merge_(leftArray: [Int], rightArray: [Int]) -> [Int] {
     
 }
 
-func mergeSort_(array: [Int]) -> [Int] {
+func mergeSort2(array: [Int]) -> [Int] {
     guard array.count > 1 else { return array }
     
     let midIndex = array.count/2

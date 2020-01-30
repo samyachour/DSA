@@ -4,22 +4,11 @@
  Two trees are duplicate if they have the same structure with same node values.
  */
 
- public class TreeNodeDuplicate {
-     public var val: Int
-     public var left: TreeNodeDuplicate?
-     public var right: TreeNodeDuplicate?
-     public init(_ val: Int) {
-         self.val = val
-         self.left = nil
-         self.right = nil
-     }
- }
- 
 class SolutionDuplicateSubTree {
     var ans = [TreeNodeDuplicate]()
     var subTrees = [String : Int]()
     
-    func collect(node_: TreeNodeDuplicate?) -> String {
+    func collect(node_: TreeNode?) -> String {
         guard let node = node_ else { return "#" }
         
         let serial = "\(node.val),\(collect(node_: node.left)),\(collect(node_: node.right))"
@@ -37,7 +26,7 @@ class SolutionDuplicateSubTree {
     }
     
     
-    func findDuplicateSubtrees(_ root: TreeNodeDuplicate?) -> [TreeNodeDuplicate?] {
+    func findDuplicateSubtrees(_ root: TreeNode?) -> [TreeNode?] {
         collect(node_: root)
         return ans
     }
