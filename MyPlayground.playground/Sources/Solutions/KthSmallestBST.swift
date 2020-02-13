@@ -34,31 +34,19 @@ return last element in list
 
 */
 
-
-public class TreeNodeKth {
-	    public var val: Int
-	    public var left: TreeNodeKth?
-	    public var right: TreeNodeKth?
-	    public init(_ val: Int) {
-		        self.val = val
-			        self.left = nil
-			        self.right = nil
-		    }
-	}
-
 class SolutionKthSmallest {
     
     var res = 0
     var maxLength = 0
     
-    func kthSmallest(_ root: TreeNodeKth?, _ k: Int) -> Int {
+    func kthSmallest(_ root: TreeNode?, _ k: Int) -> Int {
         
         maxLength = k
         helper(node: root)
         return res
     }
     
-    func helper(node: TreeNodeKth?) {
+    func helper(node: TreeNode?) {
         guard let node = node else {
             return
         }
@@ -86,7 +74,7 @@ class SolutionKthSmallest {
         
     }
 	
-	func kthSmallestBAD(_ root: TreeNodeKth?, _ k: Int) -> Int {
+	func kthSmallestBAD(_ root: TreeNode?, _ k: Int) -> Int {
 		
         guard var node = root else {
             return 0

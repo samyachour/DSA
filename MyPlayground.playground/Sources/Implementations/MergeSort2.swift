@@ -42,9 +42,9 @@ func mergeSort2(array: [Int]) -> [Int] {
     
     let midIndex = array.count/2
     
-    let left = mergeSort_(array: Array(array[0..<midIndex]))
-    let right = mergeSort_(array: Array(array[midIndex...]))
+    let left = mergeSort2(array: Array(array[0..<midIndex]))
+    let right = mergeSort2(array: Array(array[midIndex...]))
     
-    return merge_(leftArray: left, rightArray: right)
+    return merge2(leftArray: left, rightArray: right)
     
 }

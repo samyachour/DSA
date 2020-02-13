@@ -5,7 +5,7 @@
  */
 
 class SolutionDuplicateSubTree {
-    var ans = [TreeNodeDuplicate]()
+    var ans = [TreeNode]()
     var subTrees = [String : Int]()
     
     func collect(node_: TreeNode?) -> String {

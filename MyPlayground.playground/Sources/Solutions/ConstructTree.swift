@@ -71,7 +71,7 @@ class SolutionConstruct {
         }
         
         let midPoint = inorder.firstIndex(of: preorder[0])!
-        let root = TreeNodeConstruct(inorder[midPoint])
+        let root = TreeNode(inorder[midPoint])
         
         if midPoint == inorder.count - 1 {
             let leftInOrder = Array( inorder[0..<midPoint] )
